@@ -1,5 +1,5 @@
 services:
-  nginx:
+  will-you-be-my-valentine:
     image: nginx:latest
     volumes:
       - ./client:/usr/share/nginx/html
