@@ -1,5 +1,12 @@
 services:
   will-you-be-my-valentine:
-    image: nginx:latest
+    image: nginx:alpine
     volumes:
-      - ./client:/usr/share/nginx/html
+      - ./client:/usr/share/nginx/html:ro
+    networks:
+      - traefik
+    restart: unless-stopped
+
+networks:
+  traefik:
+    external: true
